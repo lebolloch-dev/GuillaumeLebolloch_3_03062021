@@ -1,0 +1,12 @@
+@import "../variables";
+
+* {
+  box-sizing: border-box;
+}
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: $general-font;
+  border: 1px solid black;
+  padding: 20px;
+}

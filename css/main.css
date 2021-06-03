@@ -1,0 +1,167 @@
+header {
+  padding-top: 0px;
+  margin-bottom: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header h1 {
+  font-family: "Shrikhand", cursive;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  max-width: 1200px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  border: 1px solid black;
+  padding: 20px;
+}
+
+#search {
+  border-radius: 25px;
+  background: #f7f7f7;
+  padding: 20px;
+}
+
+#search form {
+  max-width: 300px;
+  margin: auto;
+}
+
+#search form #search-bar {
+  font-family: FontAwesome, "Roboto", sans-serif;
+  text-align: center;
+  width: 300px;
+  height: 50px;
+  font-size: 1.2em;
+  border: 2px solid #F2F2F2;
+  border-radius: 5px;
+  background: #ededed;
+}
+
+#search form #search-bar:focus {
+  outline: none;
+}
+
+#search #booking {
+  text-align: justify;
+  margin: auto;
+  max-width: 516px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+#search #booking h2 {
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+#search #booking p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+#search #button {
+  color: white;
+  border: none;
+  background: linear-gradient(0.48turn, #ff79da, #9356dc);
+  font-size: 1.2em;
+  padding: 20px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+#search #button:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+#operation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 20px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-weight: bold;
+}
+
+#operation h2 {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+#operation .operation-select {
+  background: #f7f7f7;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 15px;
+  min-width: 335px;
+  height: 60px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+#operation .operation-select:hover {
+  -webkit-box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.2);
+  background: #f4eefc;
+}
+
+#operation .operation-select:hover .icon {
+  color: #9356dc;
+}
+
+#operation .operation-select .number {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 400;
+  font-size: 0.8em;
+  margin-left: -13px;
+  margin-right: 20px;
+  border-radius: 50%;
+  background: #9356dc;
+  width: 23px;
+  height: 23px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: white;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#operation .operation-select .icon {
+  margin-right: 20px;
+  color: grey;
+}
+/*# sourceMappingURL=main.css.map */

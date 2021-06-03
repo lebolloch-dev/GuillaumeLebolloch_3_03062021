@@ -1,0 +1,108 @@
+@import "variables";
+
+@import "pages/header";
+@import "pages/body";
+
+#search {
+  border-radius: 25px;
+  background: #f7f7f7;
+  padding: 20px;
+
+  form {
+    max-width: 300px;
+    margin: auto;
+    #search-bar {
+      font-family: FontAwesome, $general-font;
+      text-align: center;
+      width: 300px;
+      height: 50px;
+      font-size: 1.2em;
+      border: 2px solid#F2F2F2;
+      border-radius: 5px;
+      background: #ededed;
+
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  #booking {
+    text-align: justify;
+    margin: auto;
+    max-width: 516px;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      font-size: 2em;
+      margin-bottom: 5px;
+    }
+    p {
+      text-align: center;
+      font-size: 1.2em;
+    }
+  }
+  #button {
+    color: white;
+    border: none;
+    background: $color-mixe;
+    font-size: 1.2em;
+    padding: 20px;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    &:hover {
+      box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+      opacity: 0.9;
+    }
+  }
+}
+
+#operation {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  justify-content: space-between;
+  font-weight: bold;
+
+  h2 {
+    margin-bottom: 30px;
+    width: 100%;
+  }
+  .operation-select {
+    background: #f7f7f7;
+    position: relative;
+    display: flex;
+    box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    min-width: 335px;
+    height: 60px;
+    align-items: center;
+    font-size: 1.2em;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.2);
+      background: lighten($color: $color-primary, $amount: 36);
+    }
+    &:hover .icon {
+      color: $color-primary;
+    }
+    .number {
+      display: flex;
+      font-weight: 400;
+      font-size: 0.8em;
+      margin-left: -13px;
+      margin-right: 20px;
+      border-radius: 50%;
+      background: $color-primary;
+      width: 23px;
+      height: 23px;
+      justify-content: center;
+      color: white;
+      align-items: center;
+    }
+    .icon {
+      margin-right: 20px;
+      color: grey;
+    }
+  }
+}
