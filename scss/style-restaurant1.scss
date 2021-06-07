@@ -1,0 +1,183 @@
+@import "variables";
+
+@import "pages/header";
+@import "pages/body";
+@import "pages/footer";
+
+#image-restaurant {
+  position: relative;
+  img {
+    max-height: 300px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px;
+  }
+}
+
+main {
+  position: relative;
+  background: $color-background-primary;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+
+  #name-restaurant {
+    margin: auto;
+    align-items: center;
+    display: flex;
+    width: 330px;
+    justify-content: space-between;
+    h2 {
+      font-family: $title-font;
+      font-size: 1.7em;
+    }
+    i {
+      font-size: 1.7em;
+      font-weight: normal;
+    }
+  }
+  .style-general-plates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h3 {
+      height: 30px;
+      position: relative;
+      width: 100%;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      &::after {
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        content: "";
+        width: 50px;
+        height: 4px;
+        background: $color-tertiary;
+      }
+    }
+    .style-plate {
+      display: flex;
+      justify-content: space-between;
+      background: white;
+      width: 335px;
+      border-radius: 20px;
+      height: 68px;
+      padding: 0px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+      box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+      margin-bottom: 14px;
+      cursor: pointer;
+      animation: wave 0.6s forwards ease-in-out;
+      opacity: 0;
+
+      .style-info {
+        padding: 10px;
+        width: 100%;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+
+        h4 {
+          font-size: 1.2em;
+          margin: 0px;
+          margin-bottom: 8px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+
+        p {
+          width: 100%;
+          justify-content: space-between;
+          font-size: 0.9em;
+          margin: 0px;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+      }
+      .style-prize {
+        display: flex;
+
+        b {
+          display: flex;
+          align-items: flex-end;
+          padding-right: 10px;
+          padding-left: 15px;
+          padding-bottom: 10px;
+        }
+
+        span {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          background: $color-tertiary;
+          width: 0px;
+          transition: 0.4s ease-in-out;
+          font-size: 1.3em;
+          color: white;
+          i {
+            transition: 0.4s ease-in-out;
+          }
+        }
+      }
+      &:active span {
+        transition: 0.4s ease-in-out;
+        width: 50px;
+      }
+      &:active i {
+        transition: 0.4s ease-in-out;
+        transform: rotate(-360deg);
+      }
+    }
+    .starter {
+      animation-delay: 0s;
+    }
+    .main-course {
+      animation-delay: 0.3s;
+    }
+    .dessert {
+      animation-delay: 0.6s;
+    }
+  }
+
+  #button {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 32px;
+    width: 186px;
+    color: white;
+    border: none;
+    background: $color-mixe;
+    font-size: 1.2em;
+    padding: 14px;
+    border-radius: 50px;
+    box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin-bottom: 37px;
+
+    &:hover {
+      box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+      opacity: 0.9;
+    }
+  }
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    transform: translatex(0px);
+    opacity: 1;
+  }
+}

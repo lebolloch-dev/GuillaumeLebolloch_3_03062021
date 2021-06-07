@@ -1,0 +1,361 @@
+header {
+  position: relative;
+  padding: 10px;
+  margin-bottom: 20px;
+  max-width: 1440px;
+}
+
+header h1 {
+  text-align: center;
+  font-family: "Shrikhand", cursive;
+  margin: 0px;
+}
+
+header a {
+  position: absolute;
+  font-size: 1.5em;
+  left: 16px;
+  top: 20px;
+}
+
+@media screen and (max-width: 765px) {
+  header {
+    margin: 0px;
+    margin-bottom: 3px;
+    -webkit-box-shadow: 0px 2px 4px grey;
+            box-shadow: 0px 2px 4px grey;
+  }
+  header h1 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+  header a {
+    top: 35px;
+  }
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+  font-family: "Roboto", sans-serif;
+  padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 765px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #484848;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer h3 {
+  font-weight: lighter;
+  font-family: "Shrikhand", cursive;
+}
+
+footer .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+footer .fas p {
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+footer a {
+  color: white;
+}
+
+@media screen and (max-width: 765px) {
+  footer {
+    border-radius: 0px;
+    margin: 0px;
+  }
+}
+
+#image-restaurant {
+  position: relative;
+}
+
+#image-restaurant img {
+  max-height: 300px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
+main {
+  position: relative;
+  background: #f6f6f6;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main #name-restaurant {
+  margin: auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 330px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main #name-restaurant h2 {
+  font-family: "Shrikhand", cursive;
+  font-size: 1.7em;
+}
+
+main #name-restaurant i {
+  font-size: 1.7em;
+  font-weight: normal;
+}
+
+main .style-general-plates {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .style-general-plates h3 {
+  height: 30px;
+  position: relative;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main .style-general-plates h3::after {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #99e2d0;
+}
+
+main .style-general-plates .style-plate {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: white;
+  width: 335px;
+  border-radius: 20px;
+  height: 68px;
+  padding: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  -webkit-box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+  margin-bottom: 14px;
+  cursor: pointer;
+  -webkit-animation: wave 0.6s forwards ease-in-out;
+          animation: wave 0.6s forwards ease-in-out;
+  opacity: 0;
+}
+
+main .style-general-plates .style-plate .style-info {
+  padding: 10px;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main .style-general-plates .style-plate .style-info h4 {
+  font-size: 1.2em;
+  margin: 0px;
+  margin-bottom: 8px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main .style-general-plates .style-plate .style-info p {
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 0.9em;
+  margin: 0px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+main .style-general-plates .style-plate .style-prize {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+main .style-general-plates .style-plate .style-prize b {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  padding-right: 10px;
+  padding-left: 15px;
+  padding-bottom: 10px;
+}
+
+main .style-general-plates .style-plate .style-prize span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #99e2d0;
+  width: 0px;
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  font-size: 1.3em;
+  color: white;
+}
+
+main .style-general-plates .style-plate .style-prize span i {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+}
+
+main .style-general-plates .style-plate:active span {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  width: 50px;
+}
+
+main .style-general-plates .style-plate:active i {
+  -webkit-transition: 0.4s ease-in-out;
+  transition: 0.4s ease-in-out;
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+main .style-general-plates .starter {
+  -webkit-animation-delay: 0s;
+          animation-delay: 0s;
+}
+
+main .style-general-plates .main-course {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+main .style-general-plates .dessert {
+  -webkit-animation-delay: 0.6s;
+          animation-delay: 0.6s;
+}
+
+main #button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  width: 186px;
+  color: white;
+  border: none;
+  background: linear-gradient(0.48turn, #ff79da, #9356dc);
+  font-size: 1.2em;
+  padding: 14px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  margin-bottom: 37px;
+}
+
+main #button:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
+@-webkit-keyframes wave {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes wave {
+  0% {
+    -webkit-transform: translateY(-30px);
+            transform: translateY(-30px);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: translatex(0px);
+            transform: translatex(0px);
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=style-restaurant1.css.map */
