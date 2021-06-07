@@ -1,0 +1,52 @@
+@import "../variables";
+
+@media screen and (max-width: 375px) {
+  #search {
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+    form {
+      max-width: 375px;
+      #search-bar {
+        width: 375px;
+        border: none;
+        border-radius: 0px;
+        padding: 0px;
+      }
+    }
+    #booking {
+      text-align: center;
+
+      h2 {
+        margin: auto;
+        margin-top: 50px;
+        font-size: 1.7em;
+        width: 270px;
+      }
+      p {
+        font-size: 1.1em;
+      }
+
+      #button {
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 57px;
+        max-width: 240px;
+        font-size: 1.1em;
+      }
+    }
+  }
+
+  #operation {
+    margin-top: 10px;
+    .operation-select {
+      margin-left: 10px;
+    }
+  }
+
+  section {
+    margin-top: 25px;
+    border-radius: 0px;
+    padding-bottom: 50px;
+  }
+}

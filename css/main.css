@@ -13,22 +13,94 @@ header h1 {
   font-family: "Shrikhand", cursive;
 }
 
+@media screen and (max-width: 765px) {
+  header {
+    margin: 0px;
+    margin-bottom: 3px;
+    -webkit-box-shadow: 0px 2px 4px grey;
+            box-shadow: 0px 2px 4px grey;
+  }
+  header h1 {
+    margin-bottom: 5px;
+    margin-top: 15px;
+  }
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
 body {
-  max-width: 1200px;
+  position: relative;
+  max-width: 1440px;
   margin: auto;
   font-family: "Roboto", sans-serif;
-  border: 1px solid black;
   padding: 20px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+@media screen and (max-width: 765px) {
+  body {
+    padding: 0px;
+    margin: 0px;
+  }
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #484848;
+  color: white;
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+footer h3 {
+  font-weight: lighter;
+  font-family: "Shrikhand", cursive;
+}
+
+footer .fas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+footer .fas p {
+  font-weight: normal;
+  font-family: "Roboto", sans-serif;
+  padding-left: 10px;
+  margin-bottom: 0px;
+}
+
+footer a {
+  color: white;
+}
+
+@media screen and (max-width: 765px) {
+  footer {
+    border-radius: 0px;
+    margin: 0px;
+  }
 }
 
 #search {
   border-radius: 25px;
-  background: #f7f7f7;
+  background: #f6f6f6;
   padding: 20px;
 }
 
@@ -45,7 +117,7 @@ body {
   font-size: 1.2em;
   border: 2px solid #F2F2F2;
   border-radius: 5px;
-  background: #ededed;
+  background: #eaeaea;
 }
 
 #search form #search-bar:focus {
@@ -68,6 +140,7 @@ body {
 #search #booking h2 {
   font-size: 2em;
   margin-bottom: 5px;
+  margin-top: 35px;
 }
 
 #search #booking p {
@@ -80,11 +153,13 @@ body {
   border: none;
   background: linear-gradient(0.48turn, #ff79da, #9356dc);
   font-size: 1.2em;
-  padding: 20px;
+  padding: 14px;
   border-radius: 50px;
   -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
           box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
   cursor: pointer;
+  margin-bottom: 37px;
+  margin-top: 10px;
 }
 
 #search #button:hover {
@@ -104,6 +179,7 @@ body {
       -ms-flex-pack: justify;
           justify-content: space-between;
   font-weight: bold;
+  padding: 20px;
 }
 
 #operation h2 {
@@ -120,13 +196,14 @@ body {
   -webkit-box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  min-width: 335px;
+  min-width: 325px;
   height: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   font-size: 1.2em;
   cursor: pointer;
+  margin-bottom: 18px;
 }
 
 #operation .operation-select:hover {
@@ -163,5 +240,292 @@ body {
 #operation .operation-select .icon {
   margin-right: 20px;
   color: grey;
+}
+
+section {
+  margin-top: 40px;
+  background: #f6f6f6;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px;
+  border-radius: 25px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section h2 {
+  width: 100%;
+  margin-top: 35px;
+}
+
+section .new::after {
+  font-weight: bold;
+  font-size: 0.9em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  content: "Nouveau";
+  width: 79px;
+  height: 29px;
+  top: 13px;
+  right: 12px;
+  background-color: #99e2d0;
+  color: #008766;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section .restaurants {
+  position: relative;
+  height: 251px;
+  background: white;
+  border-radius: 20px;
+  margin-bottom: 18px;
+  -webkit-box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
+}
+
+section .restaurants img {
+  width: 335px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-height: 174px;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+
+section .restaurants .restaurants-info {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+section .restaurants .restaurants-info .restaurants-info-loc h3 {
+  margin-top: 8px;
+  margin-bottom: 0px;
+}
+
+section .restaurants .restaurants-info .restaurants-info-loc p {
+  margin-top: 5px;
+}
+
+section .restaurants .restaurants-info .heart {
+  position: relative;
+}
+
+section .restaurants .restaurants-info .heart .far {
+  position: relative;
+  font-size: 1.5em;
+}
+
+section .restaurants .restaurants-info .heart:active .far {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  opacity: 0;
+}
+
+section .restaurants .restaurants-info .heart .fas {
+  position: absolute;
+  font-size: 1.5em;
+  opacity: 0;
+}
+
+section .restaurants .restaurants-info .heart:active .fas {
+  background: linear-gradient(0.48turn, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
+}
+
+#wrapper {
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background: yellow;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  opacity: 1;
+  -webkit-animation: loader forwards 3s;
+          animation: loader forwards 3s;
+}
+
+@-webkit-keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+@keyframes loader {
+  0% {
+    visibility: visible;
+  }
+  100% {
+    visibility: hidden;
+  }
+}
+
+#wrapper .letter {
+  font-family: "Shrikhand", cursive;
+  font-size: 4em;
+  position: relative;
+  color: black;
+}
+
+#wrapper .dot {
+  -webkit-animation: loading 1.2s ease-in-out infinite;
+          animation: loading 1.2s ease-in-out infinite;
+  font-size: 5em;
+}
+
+#wrapper .dot-1 {
+  padding-left: 10px;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
+}
+
+#wrapper .dot-2 {
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
+}
+
+#wrapper .dot-3 {
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+}
+
+@-webkit-keyframes loading {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #9356dc;
+  }
+  50% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    color: #ff79da;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #99e2d0;
+  }
+}
+
+@keyframes loading {
+  0% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #9356dc;
+  }
+  50% {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+    color: #ff79da;
+  }
+  100% {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+    color: #99e2d0;
+  }
+}
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 375px) {
+  #search {
+    border-radius: 0px;
+    padding: 0px;
+    margin: 0px;
+  }
+  #search form {
+    max-width: 375px;
+  }
+  #search form #search-bar {
+    width: 375px;
+    border: none;
+    border-radius: 0px;
+    padding: 0px;
+  }
+  #search #booking {
+    text-align: center;
+  }
+  #search #booking h2 {
+    margin: auto;
+    margin-top: 50px;
+    font-size: 1.7em;
+    width: 270px;
+  }
+  #search #booking p {
+    font-size: 1.1em;
+  }
+  #search #booking #button {
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 57px;
+    max-width: 240px;
+    font-size: 1.1em;
+  }
+  #operation {
+    margin-top: 10px;
+  }
+  #operation .operation-select {
+    margin-left: 10px;
+  }
+  section {
+    margin-top: 25px;
+    border-radius: 0px;
+    padding-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
