@@ -1,0 +1,34 @@
+@import "../variables";
+
+@media screen and (max-width: 1120px) {
+  #image-restaurant {
+    margin-top: -2px;
+    img {
+      border-radius: 0px;
+    }
+  }
+
+  main {
+    margin-top: -55px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+
+    .starter {
+      animation-delay: 0s;
+    }
+    .main-course {
+      animation-delay: 0s;
+    }
+    .dessert {
+      animation-delay: 0s;
+    }
+  }
+}
+
+@media screen and (max-width: 723px) {
+  main {
+    .style-general-plates {
+      justify-content: center;
+    }
+  }
+}

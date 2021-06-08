@@ -1,6 +1,6 @@
 @import "../variables";
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1120px) {
   #search {
     border-radius: 0px;
     padding: 0px;
@@ -48,5 +48,15 @@
     margin-top: 25px;
     border-radius: 0px;
     padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 709px) {
+  #operation {
+    justify-content: center;
+  }
+
+  section {
+    justify-content: center;
   }
 }

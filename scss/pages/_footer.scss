@@ -12,9 +12,16 @@ footer {
     font-weight: lighter;
     font-family: $title-font;
   }
-  .fas {
+
+  a {
+    color: white;
+    cursor: pointer;
     display: flex;
-    align-items: baseline;
+    align-items: flex-end;
+    height: 30px;
+    .fas {
+      width: 15px;
+    }
     p {
       font-weight: normal;
       font-family: $general-font;
@@ -22,13 +29,9 @@ footer {
       margin-bottom: 0px;
     }
   }
-
-  a {
-    color: white;
-  }
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 1120px) {
   footer {
     border-radius: 0px;
     margin: 0px;

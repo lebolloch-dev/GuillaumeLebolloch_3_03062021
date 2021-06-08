@@ -1,6 +1,6 @@
 header {
   position: relative;
-  padding: 10px;
+  padding: 1px;
   margin-bottom: 20px;
   max-width: 1440px;
 }
@@ -15,10 +15,10 @@ header a {
   position: absolute;
   font-size: 1.5em;
   left: 16px;
-  top: 20px;
+  top: 12px;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 1120px) {
   header {
     margin: 0px;
     margin-bottom: 3px;
@@ -27,10 +27,10 @@ header a {
   }
   header h1 {
     margin-bottom: 5px;
-    margin-top: 15px;
+    margin-top: 10px;
   }
   header a {
-    top: 35px;
+    top: 20px;
   }
 }
 
@@ -52,7 +52,7 @@ a {
   color: black;
 }
 
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 1120px) {
   body {
     padding: 0px;
     margin: 0px;
@@ -79,27 +79,30 @@ footer h3 {
   font-family: "Shrikhand", cursive;
 }
 
-footer .fas {
+footer a {
+  color: white;
+  cursor: pointer;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  height: 30px;
 }
 
-footer .fas p {
+footer a .fas {
+  width: 15px;
+}
+
+footer a p {
   font-weight: normal;
   font-family: "Roboto", sans-serif;
   padding-left: 10px;
   margin-bottom: 0px;
 }
 
-footer a {
-  color: white;
-}
-
-@media screen and (max-width: 765px) {
+@media screen and (max-width: 1120px) {
   footer {
     border-radius: 0px;
     margin: 0px;
@@ -366,9 +369,7 @@ section .restaurants .restaurants-info .heart:active .fas {
 }
 
 #wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -498,7 +499,7 @@ section .restaurants .restaurants-info .heart:active .fas {
   }
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 1120px) {
   #search {
     border-radius: 0px;
     padding: 0px;
@@ -542,6 +543,19 @@ section .restaurants .restaurants-info .heart:active .fas {
     margin-top: 25px;
     border-radius: 0px;
     padding-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 709px) {
+  #operation {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  section {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 }
 /*# sourceMappingURL=main.css.map */
