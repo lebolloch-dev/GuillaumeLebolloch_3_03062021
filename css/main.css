@@ -39,30 +39,6 @@ header a {
           box-sizing: border-box;
 }
 
-html {
-  overflow: hidden;
-  -webkit-animation: overflow forwards 1s 3s;
-          animation: overflow forwards 1s 3s;
-}
-
-@-webkit-keyframes overflow {
-  0% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: scroll;
-  }
-}
-
-@keyframes overflow {
-  0% {
-    overflow: hidden;
-  }
-  100% {
-    overflow: scroll;
-  }
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -425,6 +401,30 @@ section .restaurants .restaurants-info .heart:active .fas {
   opacity: 1;
   -webkit-transition: 0.4s ease-in;
   transition: 0.4s ease-in;
+}
+
+html {
+  overflow: hidden;
+  -webkit-animation: overflow forwards 1s 3s;
+          animation: overflow forwards 1s 3s;
+}
+
+@-webkit-keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
+}
+
+@keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
 }
 
 #wrapper {

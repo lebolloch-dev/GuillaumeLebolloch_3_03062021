@@ -217,6 +217,20 @@ section {
 
 // LOADING PAGE
 
+html {
+  overflow: hidden;
+  animation: overflow forwards 1s 3s;
+
+  @keyframes overflow {
+    0% {
+      overflow: hidden;
+    }
+    100% {
+      overflow: scroll;
+    }
+  }
+}
+
 #wrapper {
   display: flex;
   flex-direction: column;
