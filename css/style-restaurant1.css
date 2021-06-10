@@ -39,12 +39,28 @@ header a {
           box-sizing: border-box;
 }
 
-body {
-  position: relative;
-  max-width: 1440px;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-  padding: 20px;
+html {
+  overflow: hidden;
+  -webkit-animation: overflow forwards 1s 3s;
+          animation: overflow forwards 1s 3s;
+}
+
+@-webkit-keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
+}
+
+@keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
 }
 
 a {
@@ -52,8 +68,49 @@ a {
   color: black;
 }
 
+body {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+body #page {
+  margin: auto;
+  padding: 20px;
+  max-width: 1440px;
+}
+
+body .page-hidden {
+  visibility: hidden;
+  -webkit-animation: page-hidden forwards 1s 3s;
+          animation: page-hidden forwards 1s 3s;
+}
+
+@-webkit-keyframes page-hidden {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes page-hidden {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1120px) {
-  body {
+  body #page {
     padding: 0px;
     margin: 0px;
   }
@@ -109,40 +166,6 @@ footer a p {
   }
 }
 
-@media screen and (max-width: 1120px) {
-  #image-restaurant {
-    margin-top: -2px;
-  }
-  #image-restaurant img {
-    border-radius: 0px;
-  }
-  main {
-    margin-top: -55px;
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  }
-  main .starter {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
-  main .main-course {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
-  main .dessert {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
-}
-
-@media screen and (max-width: 723px) {
-  main .style-general-plates {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
 #image-restaurant {
   position: relative;
 }
@@ -191,10 +214,36 @@ main #name-restaurant h2 {
   font-size: 1.7em;
 }
 
-main #name-restaurant i {
+main #name-restaurant .heart {
   font-size: 1.7em;
   font-weight: normal;
   margin-left: 35px;
+  position: relative;
+}
+
+main #name-restaurant .heart .far {
+  position: relative;
+}
+
+main #name-restaurant .heart:active .far {
+  -webkit-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  opacity: 0;
+}
+
+main #name-restaurant .heart .fas {
+  position: absolute;
+  opacity: 0;
+}
+
+main #name-restaurant .heart:active .fas {
+  background: linear-gradient(0.48turn, #ff79da, #9356dc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  opacity: 1;
+  -webkit-transition: 0.4s ease-in;
+  transition: 0.4s ease-in;
 }
 
 main .style-general-plates {
@@ -246,8 +295,6 @@ main .style-general-plates .style-plate {
           box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
   margin-bottom: 14px;
   cursor: pointer;
-  -webkit-animation: wave 0.6s forwards ease-in-out;
-          animation: wave 0.6s forwards ease-in-out;
   opacity: 0;
 }
 
@@ -334,41 +381,24 @@ main .style-general-plates .style-plate:active i {
 }
 
 main .style-general-plates .starter {
+  -webkit-animation: wave 0.6s forwards ease-in-out;
+          animation: wave 0.6s forwards ease-in-out;
   -webkit-animation-delay: 0s;
           animation-delay: 0s;
 }
 
 main .style-general-plates .main-course {
+  -webkit-animation: wave 0.6s forwards ease-in-out;
+          animation: wave 0.6s forwards ease-in-out;
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
 
 main .style-general-plates .dessert {
+  -webkit-animation: wave 0.6s forwards ease-in-out;
+          animation: wave 0.6s forwards ease-in-out;
   -webkit-animation-delay: 0.6s;
           animation-delay: 0.6s;
-}
-
-main #button {
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 32px;
-  width: 186px;
-  color: white;
-  border: none;
-  background: linear-gradient(0.48turn, #ff79da, #9356dc);
-  font-size: 1.2em;
-  padding: 14px;
-  border-radius: 50px;
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
-          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
-  cursor: pointer;
-  margin-bottom: 37px;
-}
-
-main #button:hover {
-  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
-          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
-  opacity: 0.9;
 }
 
 @-webkit-keyframes wave {
@@ -397,6 +427,29 @@ main #button:hover {
   }
 }
 
+main #button {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 32px;
+  width: 186px;
+  color: white;
+  border: none;
+  background: linear-gradient(0.48turn, #ff79da, #9356dc);
+  font-size: 1.2em;
+  padding: 14px;
+  border-radius: 50px;
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  margin-bottom: 37px;
+}
+
+main #button:hover {
+  -webkit-box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.5);
+  opacity: 0.9;
+}
+
 @media screen and (max-width: 1120px) {
   #image-restaurant {
     margin-top: -2px;
@@ -409,18 +462,6 @@ main #button:hover {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
-  main .starter {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
-  main .main-course {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
-  main .dessert {
-    -webkit-animation-delay: 0s;
-            animation-delay: 0s;
-  }
 }
 
 @media screen and (max-width: 723px) {
@@ -428,6 +469,36 @@ main #button:hover {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  main .starter {
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  main .main-course {
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  main .dessert {
+    -webkit-animation-delay: 0s !important;
+            animation-delay: 0s !important;
+  }
+  main .delay2 {
+    -webkit-animation: wave 0.9s forwards ease-in-out;
+            animation: wave 0.9s forwards ease-in-out;
+    -webkit-animation-delay: 0.3s !important;
+            animation-delay: 0.3s !important;
+  }
+  main .delay3 {
+    -webkit-animation: wave 0.9s forwards ease-in-out;
+            animation: wave 0.9s forwards ease-in-out;
+    -webkit-animation-delay: 0.6s !important;
+            animation-delay: 0.6s !important;
+  }
+  main .delay4 {
+    -webkit-animation: wave 0.9s forwards ease-in-out;
+            animation: wave 0.9s forwards ease-in-out;
+    -webkit-animation-delay: 0.9s !important;
+            animation-delay: 0.9s !important;
   }
 }
 /*# sourceMappingURL=style-restaurant1.css.map */

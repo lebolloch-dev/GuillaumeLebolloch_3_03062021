@@ -24,146 +24,171 @@
     ></script>
     <title>La note enchantée</title>
   </head>
-  <body>
-    <header>
-      <h1>ohmyfood</h1>
-      <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
-    </header>
 
-    <div id="image-restaurant">
-      <img
-        src="../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
-        alt="photo plat"
-      />
+  <body>
+    <!-- Body -->
+    <div id="page">
+      <!-- Header -->
+      <header>
+        <h1>ohmyfood</h1>
+        <a href="../index.html"><i class="fas fa-arrow-left"></i></a>
+      </header>
+
+      <!-- Photo Restaurant -->
+      <div id="image-restaurant">
+        <img
+          src="../img/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg"
+          alt="photo plat"
+        />
+      </div>
+      <main>
+        <div id="name-restaurant">
+          <h2>La note enchantée</h2>
+          <div class="heart">
+            <i class="fas fa-heart"></i>
+            <i class="far fa-heart"></i>
+          </div>
+        </div>
+
+        <!-- Starters -->
+        <div id="starters" class="style-general-plates">
+          <h3>ENTRÉES</h3>
+          <!-- S-1 -->
+          <div class="starter style-plate">
+            <div class="starter-info style-info">
+              <h4>Ravioles de foie gras</h4>
+              <p>Accompagnés de leur crème à la truffe</p>
+            </div>
+            <div class="style-prize">
+              <b>25€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- S-2 -->
+          <div class="starter style-plate delay2">
+            <div class="starter-info style-info">
+              <h4>Caviar osciètre</h4>
+              <p>Sur blini à la farine de blé noir</p>
+            </div>
+            <div class="style-prize">
+              <b>35€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- S-3 -->
+          <div class="starter style-plate delay3">
+            <div class="starter-info style-info">
+              <h4>Homard et espuma de potiront</h4>
+              <p>Mariné aux zestes d'orange</p>
+            </div>
+            <div class="style-prize">
+              <b>20€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- S-4 -->
+          <div class="starter style-plate delay4">
+            <div class="starter-info style-info">
+              <h4>Foie gras de canard cuit entier</h4>
+              <p>Confiture de figue et pain toasté</p>
+            </div>
+            <div class="style-prize">
+              <b>35€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- Plats -->
+        <div id="main-courses" class="style-general-plates">
+          <h3>PLATS</h3>
+          <!-- P-1 -->
+          <div class="main-course style-plate">
+            <div class="main-course-info style-info">
+              <h4>Noix de coquilles Saint-Jacques</h4>
+              <p>Sur lit de purée de céleri-rave</p>
+            </div>
+            <div class="style-prize">
+              <b>40€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- P-2 -->
+          <div class="main-course style-plate delay2">
+            <div class="main-course-info style-info">
+              <h4>Langoustine poêlée</h4>
+              <p>Purée de patate douce</p>
+            </div>
+            <div class="style-prize">
+              <b>35€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- P-3 -->
+          <div class="main-course style-plate delay3">
+            <div class="main-course-info style-info">
+              <h4>Mijoté de queue de boeuf</h4>
+              <p>Et riz sauvage aux zestes de citros</p>
+            </div>
+            <div class="style-prize">
+              <b>44€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- Desserts -->
+        <div id="desserts" class="style-general-plates">
+          <h3>DESSERTS</h3>
+          <!-- D-1 -->
+          <div class="dessert style-plate">
+            <div class="dessert-info style-info">
+              <h4>Macaron noisette et chocolat</h4>
+              <p>Glace au caramel brun et sel de Guérande</p>
+            </div>
+            <div class="style-prize">
+              <b>18€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- D-2 -->
+          <div class="dessert style-plate delay2">
+            <div class="dessert-info style-info">
+              <h4>Baba au rhum revisité</h4>
+              <p>Avec son coulis de citrone</p>
+            </div>
+            <div class="style-prize">
+              <b>22€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+          <!-- D-3 -->
+          <div class="dessert style-plate delay3">
+            <div class="dessert-info style-info">
+              <h4>Tarte au citron meringuée</h4>
+              <p>Déstructurée</p>
+            </div>
+            <div class="style-prize">
+              <b>23€</b>
+              <span><i class="fas fa-check-circle"></i></span>
+            </div>
+          </div>
+        </div>
+        <!-- Button -->
+        <button id="button" type="button">Commander</button>
+      </main>
+      <!-- Footer -->
+      <footer>
+        <h3>ohmyfood</h3>
+        <a href="">
+          <i class="fas fa-utensils"></i>
+          <p>Proposer un restaurant</p></a
+        >
+        <a href=""
+          ><i class="fas fa-hands-helping"></i>
+          <p>Devenir partenaire</p></a
+        >
+        <a href="">Mentions légales</a>
+        <a href="mailtoohmyfood@gmail.com">Contact</a>
+      </footer>
     </div>
-    <main>
-      <div id="name-restaurant">
-        <h2>La note enchantée</h2>
-        <i class="far fa-heart"></i>
-      </div>
-      <div id="starters" class="style-general-plates">
-        <h3>ENTRÉES</h3>
-        <div class="starter style-plate">
-          <div class="starter-info style-info">
-            <h4>Ravioles de foie gras</h4>
-            <p>Accompagnés de leur crème à la truffe</p>
-          </div>
-          <div class="style-prize">
-            <b>25€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="starter style-plate delay2">
-          <div class="starter-info style-info">
-            <h4>Caviar osciètre</h4>
-            <p>Sur blini à la farine de blé noir</p>
-          </div>
-          <div class="style-prize">
-            <b>35€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="starter style-plate delay3">
-          <div class="starter-info style-info">
-            <h4>Homard et espuma de potiront</h4>
-            <p>Mariné aux zestes d'orange</p>
-          </div>
-          <div class="style-prize">
-            <b>20€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="starter style-plate delay3">
-          <div class="starter-info style-info">
-            <h4>Foie gras de canard cuit entier</h4>
-            <p>Confiture de figue et pain toasté</p>
-          </div>
-          <div class="style-prize">
-            <b>35€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-      </div>
-      <div id="main-courses" class="style-general-plates">
-        <h3>PLATS</h3>
-        <div class="main-course style-plate">
-          <div class="main-course-info style-info">
-            <h4>Noix de coquilles Saint-Jacques</h4>
-            <p>Sur lit de purée de céleri-rave</p>
-          </div>
-          <div class="style-prize">
-            <b>40€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="main-course style-plate delay2">
-          <div class="main-course-info style-info">
-            <h4>Langoustine poêlée</h4>
-            <p>Purée de patate douce</p>
-          </div>
-          <div class="style-prize">
-            <b>35€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="main-course style-plate delay3">
-          <div class="main-course-info style-info">
-            <h4>Mijoté de queue de boeuf</h4>
-            <p>Et riz sauvage aux zestes de citros</p>
-          </div>
-          <div class="style-prize">
-            <b>44€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-      </div>
-      <div id="desserts" class="style-general-plates">
-        <h3>DESSERTS</h3>
-        <div class="dessert style-plate">
-          <div class="dessert-info style-info">
-            <h4>Macaron noisette et chocolat</h4>
-            <p>Glace au caramel brun et sel de Guérande</p>
-          </div>
-          <div class="style-prize">
-            <b>18€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="dessert style-plate delay2">
-          <div class="dessert-info style-info">
-            <h4>Baba au rhum revisité</h4>
-            <p>Avec son coulis de citrone</p>
-          </div>
-          <div class="style-prize">
-            <b>22€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-        <div class="dessert style-plate delay3">
-          <div class="dessert-info style-info">
-            <h4>Tarte au citron meringuée</h4>
-            <p>Déstructurée</p>
-          </div>
-          <div class="style-prize">
-            <b>23€</b>
-            <span><i class="fas fa-check-circle"></i></span>
-          </div>
-        </div>
-      </div>
-      <button id="button" type="button">Commander</button>
-    </main>
-    <footer>
-      <h3>ohmyfood</h3>
-      <a href="">
-        <i class="fas fa-utensils"></i>
-        <p>Proposer un restaurant</p></a
-      >
-      <a href=""
-        ><i class="fas fa-hands-helping"></i>
-        <p>Devenir partenaire</p></a
-      >
-      <a href="">Mentions légales</a>
-      <a href="mailtoohmyfood@gmail.com">Contact</a>
-    </footer>
   </body>
 </html>

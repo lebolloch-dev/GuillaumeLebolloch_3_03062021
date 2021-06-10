@@ -1,4 +1,7 @@
+// OUTILS
 @import "../variables";
+
+// RESPONSIVE 1120
 
 @media screen and (max-width: 1120px) {
   #image-restaurant {
@@ -12,23 +15,38 @@
     margin-top: -55px;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-
-    .starter {
-      animation-delay: 0s;
-    }
-    .main-course {
-      animation-delay: 0s;
-    }
-    .dessert {
-      animation-delay: 0s;
-    }
   }
 }
+
+// RESPONSIVE 723
 
 @media screen and (max-width: 723px) {
   main {
     .style-general-plates {
       justify-content: center;
+    }
+
+    // WAVE EFFECT RESPONSIVE COLUMN
+    .starter {
+      animation-delay: 0s !important;
+    }
+    .main-course {
+      animation-delay: 0s !important;
+    }
+    .dessert {
+      animation-delay: 0s !important;
+    }
+    .delay2 {
+      animation: wave 0.9s forwards ease-in-out;
+      animation-delay: 0.3s !important;
+    }
+    .delay3 {
+      animation: wave 0.9s forwards ease-in-out;
+      animation-delay: 0.6s !important;
+    }
+    .delay4 {
+      animation: wave 0.9s forwards ease-in-out;
+      animation-delay: 0.9s !important;
     }
   }
 }

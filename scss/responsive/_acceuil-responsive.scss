@@ -1,4 +1,7 @@
+// OUTILS
 @import "../variables";
+
+// RESPONSIVE 1120
 
 @media screen and (max-width: 1120px) {
   #search {
@@ -51,6 +54,8 @@
   }
 }
 
+// RESPONSIVE 709
+
 @media screen and (max-width: 709px) {
   #operation {
     justify-content: center;
@@ -58,5 +63,75 @@
 
   section {
     justify-content: center;
+  }
+}
+
+// RESPONSIVE 709->1044
+
+@media screen and (min-width: 709px) and (max-width: 1044px) {
+  #operation {
+    flex-direction: column;
+    align-items: center;
+  }
+  section {
+    justify-content: space-around;
+  }
+}
+
+// RESPONSIVE 360
+
+@media screen and (max-width: 360px) {
+  #search {
+    form {
+      #search-bar {
+        width: 360px;
+      }
+    }
+  }
+}
+
+// RESPONSIVE 320
+
+@media screen and (max-width: 320px) {
+  #search {
+    form {
+      #search-bar {
+        width: 320px;
+      }
+    }
+  }
+  section {
+    .restaurants {
+      img {
+        width: 300px;
+      }
+    }
+  }
+}
+
+// RESPONSIVE 280
+
+@media screen and (max-width: 280px) {
+  #search {
+    form {
+      #search-bar {
+        width: 280px;
+      }
+    }
+  }
+  section {
+    .restaurants {
+      img {
+        width: 270px;
+      }
+    }
+  }
+  #wrapper {
+    #title-loader {
+      font-size: 2.5em;
+    }
+    #loading-barre {
+      width: 260px;
+    }
   }
 }

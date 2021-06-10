@@ -1,8 +1,12 @@
+// OUTILS
 @import "variables";
 
+// PAGES
 @import "pages/header";
 @import "pages/body";
 @import "pages/footer";
+
+// SEARCH & BOOKING
 
 #search {
   border-radius: 25px;
@@ -27,6 +31,8 @@
       }
     }
   }
+  // BOOKING
+
   #booking {
     text-align: justify;
     margin: auto;
@@ -61,6 +67,8 @@
   }
 }
 
+// OPPERATION
+
 #operation {
   display: flex;
   flex-wrap: wrap;
@@ -79,7 +87,7 @@
     display: flex;
     box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
     border-radius: 15px;
-    min-width: 325px;
+    width: 325px;
     height: 60px;
     align-items: center;
     font-size: 1.2em;
@@ -112,6 +120,8 @@
     }
   }
 }
+
+// RESTAURANTS
 
 section {
   margin-top: 40px;
@@ -171,12 +181,15 @@ section {
           margin-top: 5px;
         }
       }
+
+      // HEART OPTION
       .heart {
         position: relative;
 
         .far {
           position: relative;
           font-size: 1.5em;
+          pointer-events: none;
         }
         &:active .far {
           transition: 0.3s ease-in;
@@ -187,6 +200,7 @@ section {
           position: absolute;
           font-size: 1.5em;
           opacity: 0;
+          pointer-events: none;
         }
         &:active .fas {
           background: $color-mixe;
@@ -201,20 +215,22 @@ section {
   }
 }
 
+// LOADING PAGE
+
 #wrapper {
-  display: none;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   position: absolute;
   background: $color-mixe;
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
-
+  height: 100vh;
+  width: 100vw;
   z-index: 100;
-  opacity: 0.9;
+  opacity: 1;
   animation: loader forwards 1s 3s;
+
+  // Loader
   @keyframes loader {
     0% {
       visibility: visible;
@@ -225,52 +241,77 @@ section {
       transform: translatex(-1000px);
     }
   }
+  #title-loader {
+    display: flex;
+    font-size: 3em;
 
-  .letter {
-    font-family: $title-font;
-    font-size: 4em;
+    .letter {
+      font-family: $title-font;
+
+      position: relative;
+      color: black;
+    }
+    .dot {
+      animation: loading 1.2s ease-in-out infinite;
+    }
+    .dot-1 {
+      padding-left: 10px;
+      animation-delay: 0.1s;
+    }
+    .dot-2 {
+      animation-delay: 0.2s;
+    }
+    .dot-3 {
+      animation-delay: 0.3s;
+    }
+
+    // Dot Loading
+    @keyframes loading {
+      0% {
+        transform: translateY(0px);
+        color: $color-primary;
+      }
+      50% {
+        transform: translateY(-25px);
+        color: $color-secondary;
+      }
+      100% {
+        transform: translateY(0px);
+        color: $color-tertiary;
+      }
+    }
+  }
+  #loading-barre {
     position: relative;
-    color: black;
-  }
+    width: 320px;
+    height: 10px;
+    background: transparent;
+    border-radius: 20px;
 
-  .dot {
-    animation: loading 1.2s ease-in-out infinite;
-    font-size: 5em;
-  }
-  .dot-1 {
-    padding-left: 10px;
-    animation-delay: 0.1s;
-  }
-  .dot-2 {
-    animation-delay: 0.2s;
-  }
-  .dot-3 {
-    animation-delay: 0.3s;
+    span {
+      box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
+      border-radius: 20px;
+      position: absolute;
+      background: $color-tertiary;
+      left: 0px;
+      width: 0%;
+      bottom: 0px;
+      top: 0px;
+      animation: bar cubic-bezier(0.24, 0.15, 0, 1.06) 3s;
+    }
+
+    // Loading bar
+    @keyframes bar {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
   }
 }
 
-@keyframes loading {
-  0% {
-    transform: translateY(0px);
-    color: $color-primary;
-  }
-  50% {
-    transform: translateY(-25px);
-    color: $color-secondary;
-  }
-  100% {
-    transform: translateY(0px);
-    color: $color-tertiary;
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+// RESPONSIVE (ACCEUIL-RESPONSIVE)
 
 @import "responsive/acceuil-responsive";

@@ -1,3 +1,4 @@
+// OUTILS
 @import "../variables";
 
 header {
@@ -19,6 +20,8 @@ header {
     top: 12px;
   }
 }
+
+// RESPONSIVE 1120
 
 @media screen and (max-width: 1120px) {
   header {

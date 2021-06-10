@@ -39,12 +39,28 @@ header a {
           box-sizing: border-box;
 }
 
-body {
-  position: relative;
-  max-width: 1440px;
-  margin: auto;
-  font-family: "Roboto", sans-serif;
-  padding: 20px;
+html {
+  overflow: hidden;
+  -webkit-animation: overflow forwards 1s 3s;
+          animation: overflow forwards 1s 3s;
+}
+
+@-webkit-keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
+}
+
+@keyframes overflow {
+  0% {
+    overflow: hidden;
+  }
+  100% {
+    overflow: scroll;
+  }
 }
 
 a {
@@ -52,8 +68,49 @@ a {
   color: black;
 }
 
+body {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Roboto", sans-serif;
+}
+
+body #page {
+  margin: auto;
+  padding: 20px;
+  max-width: 1440px;
+}
+
+body .page-hidden {
+  visibility: hidden;
+  -webkit-animation: page-hidden forwards 1s 3s;
+          animation: page-hidden forwards 1s 3s;
+}
+
+@-webkit-keyframes page-hidden {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+@keyframes page-hidden {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
 @media screen and (max-width: 1120px) {
-  body {
+  body #page {
     padding: 0px;
     margin: 0px;
   }
@@ -207,7 +264,7 @@ footer a p {
   -webkit-box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
           box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
-  min-width: 325px;
+  width: 325px;
   height: 60px;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -344,6 +401,7 @@ section .restaurants .restaurants-info .heart {
 section .restaurants .restaurants-info .heart .far {
   position: relative;
   font-size: 1.5em;
+  pointer-events: none;
 }
 
 section .restaurants .restaurants-info .heart:active .far {
@@ -356,6 +414,7 @@ section .restaurants .restaurants-info .heart .fas {
   position: absolute;
   font-size: 1.5em;
   opacity: 0;
+  pointer-events: none;
 }
 
 section .restaurants .restaurants-info .heart:active .fas {
@@ -369,7 +428,13 @@ section .restaurants .restaurants-info .heart:active .fas {
 }
 
 #wrapper {
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -378,12 +443,10 @@ section .restaurants .restaurants-info .heart:active .fas {
           align-items: center;
   position: absolute;
   background: linear-gradient(0.48turn, #ff79da, #9356dc);
-  top: 0px;
-  left: 0px;
-  right: 0px;
-  bottom: 0px;
+  height: 100vh;
+  width: 100vw;
   z-index: 100;
-  opacity: 0.9;
+  opacity: 1;
   -webkit-animation: loader forwards 1s 3s;
           animation: loader forwards 1s 3s;
 }
@@ -412,31 +475,36 @@ section .restaurants .restaurants-info .heart:active .fas {
   }
 }
 
-#wrapper .letter {
+#wrapper #title-loader {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 3em;
+}
+
+#wrapper #title-loader .letter {
   font-family: "Shrikhand", cursive;
-  font-size: 4em;
   position: relative;
   color: black;
 }
 
-#wrapper .dot {
+#wrapper #title-loader .dot {
   -webkit-animation: loading 1.2s ease-in-out infinite;
           animation: loading 1.2s ease-in-out infinite;
-  font-size: 5em;
 }
 
-#wrapper .dot-1 {
+#wrapper #title-loader .dot-1 {
   padding-left: 10px;
   -webkit-animation-delay: 0.1s;
           animation-delay: 0.1s;
 }
 
-#wrapper .dot-2 {
+#wrapper #title-loader .dot-2 {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
 }
 
-#wrapper .dot-3 {
+#wrapper #title-loader .dot-3 {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }
@@ -477,25 +545,43 @@ section .restaurants .restaurants-info .heart:active .fas {
   }
 }
 
-@-webkit-keyframes spin {
+#wrapper #loading-barre {
+  position: relative;
+  width: 320px;
+  height: 10px;
+  background: transparent;
+  border-radius: 20px;
+}
+
+#wrapper #loading-barre span {
+  -webkit-box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 5px 20px 0px rgba(0, 0, 0, 0.3);
+  border-radius: 20px;
+  position: absolute;
+  background: #99e2d0;
+  left: 0px;
+  width: 0%;
+  bottom: 0px;
+  top: 0px;
+  -webkit-animation: bar cubic-bezier(0.24, 0.15, 0, 1.06) 3s;
+          animation: bar cubic-bezier(0.24, 0.15, 0, 1.06) 3s;
+}
+
+@-webkit-keyframes bar {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    width: 0%;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    width: 100%;
   }
 }
 
-@keyframes spin {
+@keyframes bar {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    width: 0%;
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    width: 100%;
   }
 }
 
@@ -556,6 +642,52 @@ section .restaurants .restaurants-info .heart:active .fas {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media screen and (min-width: 709px) and (max-width: 1044px) {
+  #operation {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  section {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  #search form #search-bar {
+    width: 360px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #search form #search-bar {
+    width: 320px;
+  }
+  section .restaurants img {
+    width: 300px;
+  }
+}
+
+@media screen and (max-width: 280px) {
+  #search form #search-bar {
+    width: 280px;
+  }
+  section .restaurants img {
+    width: 270px;
+  }
+  #wrapper #title-loader {
+    font-size: 2.5em;
+  }
+  #wrapper #loading-barre {
+    width: 260px;
   }
 }
 /*# sourceMappingURL=main.css.map */

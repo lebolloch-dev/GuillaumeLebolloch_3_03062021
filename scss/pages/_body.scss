@@ -1,25 +1,67 @@
+// OUTILS
 @import "../variables";
+
+// GENERAL
 
 * {
   box-sizing: border-box;
 }
-body {
-  position: relative;
-  max-width: 1440px;
-  margin: auto;
-  font-family: $general-font;
+html {
+  overflow: hidden;
+  animation: overflow forwards 1s 3s;
 
-  padding: 20px;
+  @keyframes overflow {
+    0% {
+      overflow: hidden;
+    }
+    100% {
+      overflow: scroll;
+    }
+  }
 }
-
 a {
   text-decoration: none;
   color: black;
 }
 
+// BODY & PAGE
+
+body {
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+
+  font-family: $general-font;
+
+  #page {
+    margin: auto;
+    padding: 20px;
+    max-width: 1440px;
+  }
+  .page-hidden {
+    visibility: hidden;
+    animation: page-hidden forwards 1s 3s;
+  }
+
+  @keyframes page-hidden {
+    0% {
+      visibility: hidden;
+      opacity: 0;
+    }
+    100% {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+// RESPONSIVE
+
 @media screen and (max-width: 1120px) {
   body {
-    padding: 0px;
-    margin: 0px;
+    #page {
+      padding: 0px;
+      margin: 0px;
+    }
   }
 }
