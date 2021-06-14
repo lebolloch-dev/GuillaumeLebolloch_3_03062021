@@ -328,7 +328,7 @@ section .new::after {
           align-items: center;
 }
 
-section .restaurants {
+section .res {
   position: relative;
   height: 251px;
   background: white;
@@ -338,7 +338,7 @@ section .restaurants {
           box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
 }
 
-section .restaurants img {
+section .res .restaurants img {
   width: 335px;
   -o-object-fit: cover;
      object-fit: cover;
@@ -347,7 +347,7 @@ section .restaurants img {
   border-top-right-radius: 20px;
 }
 
-section .restaurants .restaurants-info {
+section .res .restaurants .restaurants-info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -361,39 +361,42 @@ section .restaurants .restaurants-info {
   padding-right: 20px;
 }
 
-section .restaurants .restaurants-info .restaurants-info-loc h3 {
+section .res .restaurants .restaurants-info .restaurants-info-loc h3 {
   margin-top: 8px;
   margin-bottom: 0px;
 }
 
-section .restaurants .restaurants-info .restaurants-info-loc p {
+section .res .restaurants .restaurants-info .restaurants-info-loc p {
   margin-top: 5px;
 }
 
-section .restaurants .restaurants-info .heart {
-  position: relative;
+section .res .heart {
+  position: absolute;
+  bottom: 25px;
+  right: 20px;
+  cursor: pointer;
 }
 
-section .restaurants .restaurants-info .heart .far {
+section .res .heart .far {
   position: relative;
   font-size: 1.5em;
   pointer-events: none;
 }
 
-section .restaurants .restaurants-info .heart:active .far {
+section .res .heart:active .far {
   -webkit-transition: 0.3s ease-in;
   transition: 0.3s ease-in;
   opacity: 0;
 }
 
-section .restaurants .restaurants-info .heart .fas {
+section .res .heart .fas {
   position: absolute;
   font-size: 1.5em;
   opacity: 0;
   pointer-events: none;
 }
 
-section .restaurants .restaurants-info .heart:active .fas {
+section .res .heart:active .fas {
   background: linear-gradient(0.48turn, #ff79da, #9356dc);
   background-clip: text;
   -webkit-background-clip: text;

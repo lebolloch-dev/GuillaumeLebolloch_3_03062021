@@ -151,65 +151,69 @@ section {
     justify-content: center;
     align-items: center;
   }
-  .restaurants {
+  .res {
     position: relative;
     height: 251px;
     background: white;
     border-radius: 20px;
     margin-bottom: 18px;
     box-shadow: 2px 1px 20px 0px rgba(0, 0, 0, 0.2);
-
-    img {
-      width: 335px;
-      object-fit: cover;
-      max-height: 174px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-    .restaurants-info {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
-      padding-left: 20px;
-      padding-right: 20px;
-      .restaurants-info-loc {
-        h3 {
-          margin-top: 8 + px;
-          margin-bottom: 0px;
-        }
-        p {
-          margin-top: 5px;
+    .restaurants {
+      img {
+        width: 335px;
+        object-fit: cover;
+        max-height: 174px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+      }
+      .restaurants-info {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        .restaurants-info-loc {
+          h3 {
+            margin-top: 8 + px;
+            margin-bottom: 0px;
+          }
+          p {
+            margin-top: 5px;
+          }
         }
       }
+    }
 
-      // HEART OPTION
-      .heart {
+    // HEART OPTION
+
+    .heart {
+      position: absolute;
+      bottom: 25px;
+      right: 20px;
+      cursor: pointer;
+      .far {
         position: relative;
+        font-size: 1.5em;
+        pointer-events: none;
+      }
+      &:active .far {
+        transition: 0.3s ease-in;
+        opacity: 0;
+      }
 
-        .far {
-          position: relative;
-          font-size: 1.5em;
-          pointer-events: none;
-        }
-        &:active .far {
-          transition: 0.3s ease-in;
-          opacity: 0;
-        }
-
-        .fas {
-          position: absolute;
-          font-size: 1.5em;
-          opacity: 0;
-          pointer-events: none;
-        }
-        &:active .fas {
-          background: $color-mixe;
-          background-clip: text;
-          -webkit-background-clip: text;
-          color: transparent;
-          opacity: 1;
-          transition: 0.4s ease-in;
-        }
+      .fas {
+        position: absolute;
+        font-size: 1.5em;
+        opacity: 0;
+        pointer-events: none;
+      }
+      &:active .fas {
+        background: $color-mixe;
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        opacity: 1;
+        transition: 0.4s ease-in;
       }
     }
   }
