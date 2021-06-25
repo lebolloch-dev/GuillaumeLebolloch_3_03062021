@@ -8,15 +8,7 @@
     border-radius: 0px;
     padding: 0px;
     margin: 0px;
-    form {
-      max-width: 375px;
-      #search-bar {
-        width: 375px;
-        border: none;
-        border-radius: 0px;
-        padding: 0px;
-      }
-    }
+
     #booking {
       text-align: center;
 
@@ -78,28 +70,9 @@
   }
 }
 
-// RESPONSIVE 360
-
-@media screen and (max-width: 360px) {
-  #search {
-    form {
-      #search-bar {
-        width: 360px;
-      }
-    }
-  }
-}
-
 // RESPONSIVE 320
 
 @media screen and (max-width: 320px) {
-  #search {
-    form {
-      #search-bar {
-        width: 320px;
-      }
-    }
-  }
   section {
     .restaurants {
       img {
@@ -112,13 +85,6 @@
 // RESPONSIVE 280
 
 @media screen and (max-width: 280px) {
-  #search {
-    form {
-      #search-bar {
-        width: 280px;
-      }
-    }
-  }
   section {
     .restaurants {
       img {
